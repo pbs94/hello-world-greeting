@@ -11,7 +11,7 @@ node('master') {
    }
    stage('Static Code Analysis'){
       withMaven(maven: 'M3') {
-         sh 'mvn clean verify sonar:sonar - Dsonar.projectName=example-project -Dsonar.projectKey=example-project -Dsonar.projectVersion=$BUILD_NUMBER';
+         sh 'mvn sonar:sonar -Dsonar.projectKey=example-project -Dsonar.host.url=http://localhost:9000 -Dsonar.login=925bae38153c0da939fc55d21ea686159bcbcb2d -Dsonar.java.binaries=target/classes';
       }
    }
    stage('Integration Test'){
