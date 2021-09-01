@@ -1,5 +1,3 @@
-package hello;
-
 import static org.hamcrest.CoreMatchers.containsString;
 import static org.junit.Assert.*;
 
@@ -7,7 +5,7 @@ import org.junit.Test;
 
 public class MessageTest {
 	
-	private Message message = new Message();
+	private hello.Message message = new hello.Message();
 
 	@Test
 	public void messageSaysHello() {
