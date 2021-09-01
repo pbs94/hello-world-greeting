@@ -15,5 +15,7 @@ public class DateTimeTest {
       GregorianCalendar time = new GregorianCalendar();
       int hour = time.get(Calendar.HOUR_OF_DAY);
       assertEquals(hour, var.dateTime());
+
+
    }
 }
